@@ -37,6 +37,7 @@ struct b2FixtureData {
 	std::string texture;
 	uint8_t pos;
 	uint8_t type;
+	bool expand;
 };
 /// This holds contact filtering data.
 struct b2Filter {
