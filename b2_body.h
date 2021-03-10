@@ -178,6 +178,10 @@ public:
 	float GetX() const;
 
 	float GetY() const;
+
+	void SetX(float x);
+	void SetY(float y);
+	void SetAngle(float a);
 	/// Get the angle in radians.
 	/// @return the current world rotation angle in radians.
 	float GetAngle() const;
@@ -511,6 +515,15 @@ inline float b2Body::GetY() const {
 	return GetPosition().y;
 }
 
+inline void b2Body::SetX(float x) {
+	SetTransform({x,GetY()},GetAngle());
+}
+inline void b2Body::SetY(float y) {
+	SetTransform({GetX(),y},GetAngle());
+}
+inline void b2Body::SetAngle(float a) {
+	SetTransform(GetPosition(),a);
+}
 inline float b2Body::GetLinearVelocityX() const {
 	return GetLinearVelocity().x;
 }
