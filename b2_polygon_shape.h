@@ -23,7 +23,6 @@
 #define B2_POLYGON_SHAPE_H
 
 #include "b2_shape.h"
-#include "SDL.h"
 
 /// A solid convex polygon. It is assumed that the interior of the polygon is to
 /// the left of each edge.
@@ -81,7 +80,6 @@ public:
 	b2Vec2 m_vertices[b2_maxPolygonVertices];
 	b2Vec2 m_normals[b2_maxPolygonVertices];
 	int32 m_count;
-	SDL_Texture *cache=0;
 	b2Vec2 *big_polygon=0;
 	int b_count;
 };

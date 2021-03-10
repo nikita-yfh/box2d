@@ -51,7 +51,6 @@ enum b2BodyType {
 
 
 struct b2BodyData {
-	std::string id;
 };
 
 
@@ -543,14 +542,6 @@ inline void b2Body::SetLinearVelocityY(float v) {
 	}
 
 	m_linearVelocity.y = v;
-}
-
-inline std::string &b2Body::GetID() const {
-	return GetUserData()->id;
-}
-
-inline void b2Body::SetID(std::string id) {
-	GetUserData()->id=id;
 }
 
 inline void b2Body::Force(float fx,float fy,float px,float py) {

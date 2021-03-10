@@ -33,7 +33,6 @@ class b2BroadPhase;
 class b2Fixture;
 
 struct b2FixtureData {
-	std::string id;
 	std::string texture;
 	uint8_t pos;
 	uint8_t type;
